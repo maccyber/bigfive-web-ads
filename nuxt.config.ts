@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   },
   ssr: true,
   modules: [
+    '@nuxtjs/google-fonts',
     '@vite-pwa/nuxt',
     '@nuxtjs/i18n',
     '@nuxtjs/sitemap',
@@ -33,6 +34,11 @@ export default defineNuxtConfig({
   },
   gtag: {
     id: 'G-DKM3FF6CR0'
+  },
+  googleFonts: {
+    families: {
+      'Passion One': true
+    }
   },
   app: {
     head: {

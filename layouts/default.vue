@@ -15,8 +15,12 @@
   </v-app>
 </template>
 
-<script>
+<script setup>
 import { useMainStore } from '@/store'
+const snackbar = useMainStore().snackbar
+</script>
+
+<script>
 
 export default {
   name: 'App',
@@ -35,11 +39,6 @@ export default {
       }
     ]
   }),
-  data() {
-    return {
-      snackbar: useMainStore().snackbar
-    }
-  },
   created() {
     const { dir } = this.$i18n.locales.find(i => i.code === this.$i18n.locale)
     this.$vuetify.rtl = dir === 'rtl'

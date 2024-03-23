@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "@mdi/js": "7.4.47",
+    "@nuxtjs/google-fonts": "3.2.0",
     "@nuxtjs/i18n": "8.2.0",
     "@nuxtjs/sitemap": "5.1.2",
     "@vite-pwa/nuxt": "0.6.0",
