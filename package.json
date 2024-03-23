@@ -1,0 +1,35 @@
+{
+  "name": "nuxt-app",
+  "type": "module",
+  "description": "Website for testing five factor model of personality",
+  "author": "Jonas Enge <jonas.enge@gmail.com> (https://github.com/maccyber)",
+  "private": true,
+  "license": "MIT",
+  "keywords": [
+    "bigfive",
+    "personality"
+  ],
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@mdi/font": "7.4.47",
+    "nuxt": "3.11.1",
+    "vue": "3.4.21",
+    "vue-router": "4.3.0",
+    "vue3-apexcharts": "1.5.2",
+    "apexcharts": "3.48.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/i18n": "8.2.0",
+    "@nuxtjs/sitemap": "5.1.2",
+    "@vite-pwa/nuxt": "0.6.0",
+    "nuxt-gtag": "2.0.5",
+    "vite-plugin-vuetify": "2.0.3",
+    "vuetify": "3.5.11"
+  }
+}
