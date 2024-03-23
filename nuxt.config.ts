@@ -15,11 +15,14 @@ export default defineNuxtConfig({
     'nuxt-gtag',
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
-        // @ts-expect-error
+        // @ts-expect-error 18048
         config.plugins.push(vuetify({ autoImport: true }))
       })
     },
   ],
+  typescript: {
+    typeCheck: true,
+  },
   vite: {
     vue: {
       template: {
