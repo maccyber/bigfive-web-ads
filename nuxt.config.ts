@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '@vite-pwa/nuxt',
     '@nuxtjs/i18n',
     '@nuxtjs/sitemap',
+    '@pinia/nuxt',
     'nuxt-gtag',
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
