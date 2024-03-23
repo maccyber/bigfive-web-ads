@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import { languages, getItems, sleep, getInfo, elapsedTimeInSeconds } from '../lib/helpers'
+import type { SetSnackbarOptions } from './types'
 
 export const useMainStore = defineStore('main', {
   state: () => ({
@@ -35,7 +36,7 @@ export const useMainStore = defineStore('main', {
     },
   },
   actions: {
-    setSnackbar({ msg, type = 'info' }) {
+    setSnackbar({ msg, type = 'info' }: SetSnackbarOptions) {
       this.snackbar.active = true
       this.snackbar.message = msg
       this.snackbar.type = type
