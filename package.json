@@ -22,6 +22,7 @@
     "apexcharts": "3.48.0",
     "nuxt": "3.11.1",
     "pinia": "2.1.7",
+    "svg-country-flags": "1.2.10",
     "vue": "3.4.21",
     "vue-router": "4.3.0",
     "vue3-apexcharts": "1.5.2"

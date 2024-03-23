@@ -12,13 +12,13 @@
     </v-main>
 
     <!-- Snackbar -->
-    <v-snackbar
-      v-model="snackbar.active"
-      :color="snackbar.type === 'error' ? 'error' : 'primary'"
-      :bottom="true"
-    >
-      {{ snackbar.message }}
-    </v-snackbar>
+    <!-- <v-snackbar -->
+    <!--   v-model="snackbar.active" -->
+    <!--   :color="snackbar.type === 'error' ? 'error' : 'primary'" -->
+    <!--   :bottom="true" -->
+    <!-- > -->
+    <!--   {{ snackbar.message }} -->
+    <!-- </v-snackbar> -->
 
     <Footer />
   </v-app>
@@ -27,7 +27,7 @@
 <script>
 import Toolbar from '../components/Toolbar'
 import Footer from '../components/Footer'
-import { mapState } from 'vuex'
+// import { mapState } from 'vuex'
 
 export default {
   name: 'App',
@@ -50,7 +50,7 @@ export default {
       }
     ]
   }),
-  computed: mapState(['snackbar']),
+  // computed: mapState(['snackbar']),
   created () {
     const { dir } = this.$i18n.locales.find(i => i.code === this.$i18n.locale)
     this.$vuetify.rtl = dir === 'rtl'
