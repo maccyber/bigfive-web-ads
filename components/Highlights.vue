@@ -6,12 +6,12 @@
       sm="6"
       md="3"
     >
-      <img
+      <NuxtImg
         class="responsive"
         alt="open source"
         src="/images/open-source.png"
         loading="lazy"
-      >
+      />
       <h3 v-html="$t('frontpage.cards.open.title')" />
       <span color="#666">{{ $t('frontpage.cards.open.text') }}</span>
     </v-col>
@@ -21,12 +21,12 @@
       sm="6"
       md="3"
     >
-      <img
+      <NuxtImg
         class="responsive"
         alt="free"
         src="/images/free.png"
         loading="lazy"
-      >
+      />
       <h3 v-html="$t('frontpage.cards.free.title')" />
       <span color="#666">{{ $t('frontpage.cards.free.text') }}</span>
     </v-col>
@@ -36,12 +36,12 @@
       sm="6"
       md="3"
     >
-      <img
+      <NuxtImg
         class="responsive"
         alt="scientific"
         src="/images/scientific.png"
         loading="lazy"
-      >
+      />
       <h3 v-html="$t('frontpage.cards.scientific.title')" />
       <span color="#666">{{ $t('frontpage.cards.scientific.text') }}</span>
     </v-col>
@@ -51,12 +51,12 @@
       sm="6"
       md="3"
     >
-      <img
+      <NuxtImg
         class="responsive"
         alt="Translated to over 20 langauges"
         src="/images/languages.png"
         loading="lazy"
-      >
+      />
       <h3 v-html="$t('frontpage.cards.translated.title')" />
       <span
         color="#666"

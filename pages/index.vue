@@ -16,7 +16,7 @@
           <div class="ml-2 mt-2 grey--text text--darken-2" v-html="$t('frontpage.no_registration')" />
         </v-col>
         <v-col cols="12" xs="12" md="6" class="text-center">
-          <img class="responsive" alt="Girl infront of test" src="/images/front.svg">
+          <NuxtImg class="responsive" alt="Girl infront of test" src="/images/front.svg" />
         </v-col>
       </v-row>
     </Wrapper>
@@ -33,7 +33,7 @@
     <Wrapper background="white">
       <v-row cols="12" :class="{ 'flex-column-reverse': display.smAndDown }" class="py-10">
         <v-col cols="12" xs="12" md="6" class="text-center">
-          <img class="responsive" alt="Comparing people" src="/images/front_compare.svg" loading="lazy">
+          <NuxtImg class="responsive" alt="Comparing people" src="/images/front_compare.svg" loading="lazy" />
         </v-col>
         <v-col cols="12" xs="12" md="6" class="text-md-left text-center">
           <h1 v-html="$t('frontpage.compare.title')" />
