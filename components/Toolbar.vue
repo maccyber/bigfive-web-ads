@@ -38,7 +38,7 @@
         >
           {{ $t('toolbar.compare_with') }}
         </v-btn>
-        <!-- <LanguageSwitcher /> -->
+        <LanguageSwitcher />
         <!-- <v-menu -->
         <!--   v-model="drawer" -->
         <!--   bottom -->

@@ -1,7 +1,7 @@
 <template>
   <v-menu v-model="drawer" bottom offset-y max-width="250">
-    <template #activator="{ on }">
-      <v-btn icon aria-label="Expand menu" v-on="on" @click="drawer = !drawer">
+    <template v-on:activator="{ props }">
+      <v-btn icon aria-label="Expand menu" v-bind="props" @click="drawer = !drawer">
         <v-img v-if="icons[locale]" :src="icons[locale]" max-width="24" />
         <span v-else>
           {{ locale }}
