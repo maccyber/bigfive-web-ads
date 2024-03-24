@@ -38,50 +38,50 @@
         >
           {{ $t('toolbar.compare_with') }}
         </v-btn>
-        <LanguageSwitcher />
-        <v-menu
-          v-model="drawer"
-          bottom
-          offset-y
-          min-width="150"
-        >
-          <template #activator="{ on }">
-            <v-btn
-              icon
-              aria-label="Expand menu"
-              v-on="on"
-              @click="drawer = !drawer"
-            >
-              <v-icon>mdi-menu</v-icon>
-            </v-btn>
-          </template>
-          <v-list nav>
-            <v-list-item>
-              <v-subheader class="text-uppercase">
-                {{ $t('common.pages') }}
-              </v-subheader>
-            </v-list-item>
-            <v-divider />
-            <v-list-item to="localePath('/result')" link class="text-none font-weight-regular pl-5 body-2">
-              {{ $t('toolbar.result') }}
-            </v-list-item>
-            <v-list-item to="localePath('/compare')" link class="text-none font-weight-regular pl-5 body-2">
-              {{ $t('toolbar.compare') }}
-            </v-list-item>
-            <v-list-item to="localePath('/articles')" link class="text-none font-weight-regular pl-5 body-2">
-              {{ $t('toolbar.articles') }}
-            </v-list-item>
-            <v-list-item to="localePath('/privacy')" link class="text-none font-weight-regular pl-5 body-2">
-              {{ $t('toolbar.privacy') }}
-            </v-list-item>
-            <v-list-item to="localePath('/about')" link class="text-none font-weight-regular pl-5 body-2">
-              {{ $t('toolbar.about') }}
-            </v-list-item>
-            <v-list-item to="localePath('/faq')" link class="text-none font-weight-regular pl-5 body-2">
-              FAQ
-            </v-list-item>
-          </v-list>
-        </v-menu>
+        <!-- <LanguageSwitcher /> -->
+        <!-- <v-menu -->
+        <!--   v-model="drawer" -->
+        <!--   bottom -->
+        <!--   offset-y -->
+        <!--   min-width="150" -->
+        <!-- > -->
+        <!--   <template #activator="{ on }"> -->
+        <!--     <v-btn -->
+        <!--       icon -->
+        <!--       aria-label="Expand menu" -->
+        <!--       v-on="on" -->
+        <!--       @click="drawer = !drawer" -->
+        <!--     > -->
+        <!--       <v-icon>mdi-menu</v-icon> -->
+        <!--     </v-btn> -->
+        <!--   </template> -->
+        <!--   <v-list nav> -->
+        <!--     <v-list-item> -->
+        <!--       <v-subheader class="text-uppercase"> -->
+        <!--         {{ $t('common.pages') }} -->
+        <!--       </v-subheader> -->
+        <!--     </v-list-item> -->
+        <!--     <v-divider /> -->
+        <!--     <v-list-item to="localePath('/result')" link class="text-none font-weight-regular pl-5 body-2"> -->
+        <!--       {{ $t('toolbar.result') }} -->
+        <!--     </v-list-item> -->
+        <!--     <v-list-item to="localePath('/compare')" link class="text-none font-weight-regular pl-5 body-2"> -->
+        <!--       {{ $t('toolbar.compare') }} -->
+        <!--     </v-list-item> -->
+        <!--     <v-list-item to="localePath('/articles')" link class="text-none font-weight-regular pl-5 body-2"> -->
+        <!--       {{ $t('toolbar.articles') }} -->
+        <!--     </v-list-item> -->
+        <!--     <v-list-item to="localePath('/privacy')" link class="text-none font-weight-regular pl-5 body-2"> -->
+        <!--       {{ $t('toolbar.privacy') }} -->
+        <!--     </v-list-item> -->
+        <!--     <v-list-item to="localePath('/about')" link class="text-none font-weight-regular pl-5 body-2"> -->
+        <!--       {{ $t('toolbar.about') }} -->
+        <!--     </v-list-item> -->
+        <!--     <v-list-item to="localePath('/faq')" link class="text-none font-weight-regular pl-5 body-2"> -->
+        <!--       FAQ -->
+        <!--     </v-list-item> -->
+        <!--   </v-list> -->
+        <!-- </v-menu> -->
       </div>
     </v-app-bar>
   </div>
