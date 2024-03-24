@@ -14,6 +14,12 @@ export const useMainStore = defineStore('main', {
       message: '',
       type: 'info'
     },
+    form: {
+      age: 0,
+      language: '',
+      gender: '',
+      accepted: false
+    },
     languages,
     test: {
       testStart: 0,
@@ -27,10 +33,10 @@ export const useMainStore = defineStore('main', {
     }
   }),
   getters: {
-    FORM_IS_VALID() {
+    FORM_IS_VALID(): boolean {
       return !!(this.form.gender && this.form.language && this.form.age && this.form.age > 15)
     },
-    GET_SELECTED_LANGUAGE() {
+    GET_SELECTED_LANGUAGE(): string | undefined {
       const { text } = this.languages.find(({ value }) => value === this.form.language) || {}
       return text
     },
