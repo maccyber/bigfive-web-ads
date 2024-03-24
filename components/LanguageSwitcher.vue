@@ -1,9 +1,8 @@
 <template>
-  <v-menu v-model="drawer" bottom offset-y max-width="250">
-    <template v-on:activator="{ props }">
-      <v-btn icon aria-label="Expand menu" v-bind="props" @click="drawer = !drawer">
-        <v-img v-if="icons[locale]" :src="icons[locale]" max-width="24" />
-        <span v-else>
+  <v-menu bottom offset-y max-width="250">
+    <template v-slot:activator="{ props }">
+      <v-btn icon aria-label="Expand menu" v-bind="props" v-icon>
+        <span>
           {{ locale }}
         </span>
       </v-btn>
@@ -27,49 +26,6 @@
 </template>
 
 <script setup>
-import enIcon from 'svg-country-flags/svg/gb.svg'
-import heIcon from 'svg-country-flags/svg/il.svg'
-import jaIcon from 'svg-country-flags/svg/jp.svg'
-import noIcon from 'svg-country-flags/svg/no.svg'
-import dkIcon from 'svg-country-flags/svg/dk.svg'
-import seIcon from 'svg-country-flags/svg/se.svg'
-import fiIcon from 'svg-country-flags/svg/fi.svg'
-import deIcon from 'svg-country-flags/svg/de.svg'
-import esIcon from 'svg-country-flags/svg/es.svg'
-import frIcon from 'svg-country-flags/svg/fr.svg'
-import ruIcon from 'svg-country-flags/svg/ru.svg'
-import cnIcon from 'svg-country-flags/svg/cn.svg'
-import uaIcon from 'svg-country-flags/svg/ua.svg'
-import inIcon from 'svg-country-flags/svg/in.svg'
-import idIcon from 'svg-country-flags/svg/id.svg'
-import ptIcon from 'svg-country-flags/svg/br.svg'
-import itIcon from 'svg-country-flags/svg/it.svg'
-import plIcon from 'svg-country-flags/svg/pl.svg'
-import isIcon from 'svg-country-flags/svg/is.svg'
-import thIcon from 'svg-country-flags/svg/th.svg'
-
-const icons = {
-  en: enIcon,
-  he: heIcon,
-  ja: jaIcon,
-  no: noIcon,
-  da: dkIcon,
-  sv: seIcon,
-  fi: fiIcon,
-  de: deIcon,
-  es: esIcon,
-  fr: frIcon,
-  ru: ruIcon,
-  'zh-Hans': cnIcon,
-  uk: uaIcon,
-  hi: inIcon,
-  id: idIcon,
-  pt: ptIcon,
-  it: itIcon,
-  pl: plIcon,
-  is: isIcon,
-  th: thIcon
-}
 const { locale, locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 
