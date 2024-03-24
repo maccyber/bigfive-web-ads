@@ -55,9 +55,9 @@
           </template>
           <v-list nav>
             <v-list-item>
-              <v-subheader class="text-uppercase">
+              <v-list-subheader class="text-uppercase">
                 {{ $t('common.pages') }}
-              </v-subheader>
+              </v-list-subheader>
             </v-list-item>
             <v-divider />
             <v-list-item to="localePath('/result')" link class="text-none font-weight-regular pl-5 body-2">

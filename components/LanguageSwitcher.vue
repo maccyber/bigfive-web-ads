@@ -1,7 +1,7 @@
 <template>
   <v-menu bottom offset-y max-width="250">
     <template v-slot:activator="{ props }">
-      <v-btn icon aria-label="Expand menu" v-bind="props" v-icon>
+      <v-btn icon aria-label="Expand menu" v-bind="props">
         <span>
           {{ locale }}
         </span>
@@ -9,9 +9,9 @@
     </template>
     <v-list>
       <v-list-item>
-        <v-subheader class="text-uppercase">
+        <v-list-subheader class="text-uppercase">
           {{ $t('common.languages') }}
-        </v-subheader>
+        </v-list-subheader>
       </v-list-item>
       <v-divider />
       <v-row>
