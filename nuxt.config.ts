@@ -3,7 +3,7 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
   devtools: { enabled: true },
   build: {
-    transpile: ['vuetify'],
+    transpile: ['vuetify']
   },
   ssr: true,
   modules: [
@@ -18,20 +18,20 @@ export default defineNuxtConfig({
         // @ts-expect-error 18048
         config.plugins.push(vuetify({ autoImport: true }))
       })
-    },
+    }
   ],
   typescript: {
-    typeCheck: true,
+    typeCheck: true
   },
   vite: {
     vue: {
       template: {
-        transformAssetUrls,
-      },
-    },
+        transformAssetUrls
+      }
+    }
   },
   site: {
-    url: 'https://bigfive-test.com',
+    url: 'https://bigfive-test.com'
   },
   pwa: {
   },
@@ -68,11 +68,11 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
         // { rel: 'preconnect', href: 'https://cdn.jsdelivr.net', crossorigin: true }
       ]
-    },
+    }
   },
   i18n: {
     compilation: {
-      strictMessage: false,
+      strictMessage: false
     },
     locales: [
       {
@@ -225,5 +225,5 @@ export default defineNuxtConfig({
       useCookie: true,
       fallbackLocale: 'en'
     }
-  },
+  }
 })

@@ -33,19 +33,19 @@ export const useMainStore = defineStore('main', {
     }
   }),
   getters: {
-    FORM_IS_VALID(): boolean {
+    FORM_IS_VALID (): boolean {
       return !!(this.form.gender && this.form.language && this.form.age && this.form.age > 15)
     },
-    GET_SELECTED_LANGUAGE(): string | undefined {
-      const { text } = this.languages.find(({ value }) => value === this.form.language) || {}
+    GET_SELECTED_LANGUAGE (): string | undefined {
+      const { text } = this.languages.find(({ value }) => value === this.form.language) ?? {}
       return text
-    },
+    }
   },
   actions: {
-    setSnackbar({ msg, type = 'info' }: SetSnackbarOptions) {
+    setSnackbar ({ msg, type = 'info' }: SetSnackbarOptions) {
       this.snackbar.active = true
       this.snackbar.message = msg
       this.snackbar.type = type
-    },
-  },
+    }
+  }
 })
