@@ -22,28 +22,12 @@
   </v-card>
 </template>
 
-<script>
-export default {
-  name: 'Agreeableness',
-  head () {
-    return {
-      title: this.$t('agreeableness.seo.title'),
-      meta: [
-        { hid: 'title', name: 'title', content: this.$t('agreeableness.seo.title') },
-        { hid: 'description', name: 'description', content: this.$t('agreeableness.seo.description') },
-        { hid: 'keywords', name: 'keywords', content: this.$t('seo.keywords') },
-        // Open Graph
-        { hid: 'og:title', name: 'og:title', content: this.$t('agreeableness.seo.title') },
-        { hid: 'og:description', name: 'og:description', content: this.$t('agreeableness.seo.description') },
-        { hid: 'twitter:title', name: 'twitter:title', content: this.$t('agreeableness.seo.title') },
-        { hid: 'twitter:description', name: 'twitter:description', content: this.$t('agreeableness.seo.description') }
-      ]
-    }
-  },
-  metaInfo: {
-    title: 'Read more about Agreeableness'
-  }
-}
+<script setup>
+import { mdiFormatQuoteOpen, mdiFormatQuoteClose } from '@mdi/js'
+
+definePageMeta({
+  i18nKey: 'agreeableness'
+})
 </script>
 
 <style>
