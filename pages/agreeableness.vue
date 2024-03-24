@@ -4,6 +4,7 @@
       src="/images/openness.jpg"
       height="200px"
       lazy
+      cover
     >
       <v-card-title
         class="image-title"

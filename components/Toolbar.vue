@@ -4,7 +4,7 @@
       <div class="toolbar-wrapper px-3">
         <div class="d-flex align-center">
           <nuxt-link :to="localePath('/')">
-            <v-img alt="BigFive logo" class="shrink mr-2" contain src="/logo.svg" width="40" />
+            <NuxtImg alt="BigFive logo" class="shrink mr-2" contain src="/logo.svg" width="40" />
           </nuxt-link>
         </div>
         <v-spacer />
