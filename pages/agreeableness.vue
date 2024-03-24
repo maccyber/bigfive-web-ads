@@ -13,9 +13,9 @@
     <v-card-text>
       <span v-html="$t('agreeablenessPage.text1')" />
       <blockquote class="blockquote">
-        <v-icon>{{ mdiFormatQuoteOpen }}</v-icon>
+        <v-icon>mdi-format-quote-open }}</v-icon>
         <span v-html="$t('agreeablenessPage.quote')" />
-        <v-icon>{{ mdiFormatQuoteClose }}</v-icon>
+        <v-icon>mdi-format-quote-close</v-icon>
       </blockquote>
       <span v-html="$t('agreeablenessPage.text2')" />
     </v-card-text>
@@ -23,14 +23,8 @@
 </template>
 
 <script>
-import { mdiFormatQuoteOpen, mdiFormatQuoteClose } from '@mdi/js'
-
 export default {
   name: 'Agreeableness',
-  data: () => ({
-    mdiFormatQuoteClose,
-    mdiFormatQuoteOpen
-  }),
   head () {
     return {
       title: this.$t('agreeableness.seo.title'),
