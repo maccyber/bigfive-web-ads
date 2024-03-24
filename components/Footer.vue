@@ -18,7 +18,7 @@
               href="https://www.facebook.com/rubynorno/"
               aria-label="Gå til facebook"
             >
-              <v-icon large>{{ mdiFacebook }}</v-icon>
+              <v-icon color="black" large>mdi-facebook</v-icon>
             </a>
 
             <v-divider
@@ -31,7 +31,7 @@
               href="https://github.com/rubynor"
               aria-label="Gå til github"
             >
-              <v-icon large>{{ mdiGithub }}</v-icon>
+              <v-icon color="black" large>mdi-github</v-icon>
             </a>
 
             <v-divider
@@ -44,7 +44,7 @@
               href="https://twitter.com/rubynor"
               aria-label="Gå til twitter"
             >
-              <v-icon large>{{ mdiTwitter }}</v-icon>
+              <v-icon color="black" large>mdi-twitter</v-icon>
             </a>
 
             <v-divider
@@ -57,7 +57,7 @@
               href="https://no.linkedin.com/company/rubynor-as"
               aria-label="Gå til linkedIn"
             >
-              <v-icon large>{{ mdiLinkedin }}</v-icon>
+              <v-icon color="black" large>mdi-linkedin</v-icon>
             </a>
           </v-col>
           <v-col
@@ -91,18 +91,7 @@
   </v-footer>
 </template>
 
-<script>
-import { mdiFacebook, mdiTwitter, mdiGithub, mdiLinkedin } from '@mdi/js'
-
-export default {
-  name: 'Footer',
-  data: () => ({
-    mdiFacebook,
-    mdiTwitter,
-    mdiLinkedin,
-    mdiGithub
-  })
-}
+<script setup>
 </script>
 
 <style scoped>
