@@ -7,7 +7,7 @@ interface Language {
 
 export const languages: Language[] = b5.getInfo()
   .languages
-  .map(({ id, text }: { id: string; text: string }) => ({ value: id, text }))
+  .map(({ code, text }) => ({ value: code, text }))
   .sort((a: Language, b: Language) => a.text.localeCompare(b.text));
 
 export const getItems: () => Question[] = b5.getItems;
