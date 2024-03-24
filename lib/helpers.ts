@@ -30,7 +30,24 @@ export const validMongoId: (id: string) => boolean = (id: string) => /^[0-9a-fA-
 
 export const base64url: (str: string) => string = (str: string) => escape(Buffer.from(str, 'utf8').toString('base64'))
 
+const matchB5ResultURL: RegExp = /^https?:\/\/.+\/result\//
 export const formatId: (id: string) => string = (id: string) => {
+  const formattedId = id
+    .replace(matchB5ResultURL, '')
+    .toLowerCase()
+    .replace(' ', '')
+
+  const formattedIdOld = formatIdOld(id)
+  if (formattedId !== formattedIdOld) {
+    console.error(new Error(`ID formatting with regex did not match old method! Using old method.. [New: "${formattedId}" Old: "${formattedIdOld}"]`))
+    return formattedIdOld
+  }
+
+  return formattedId
+}
+
+// TODO: Remove after correctness verification
+export const formatIdOld: (id: string) => string = (id: string) => {
   return /^((http|https):\/\/)/.test(id) ? id.replace((process.env.NODE_ENV === 'development' ? 'http://localhost:8080' : 'https://bigfive-test.com') + '/result/', '').replace(' ', '').toLowerCase() : id ? id.replace(' ', '') : id
 }
 
