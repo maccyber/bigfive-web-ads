@@ -28,22 +28,22 @@
               </v-list-subheader>
             </v-list-item>
             <v-divider />
-            <v-list-item to="localePath('/result')" link class="text-none font-weight-regular pl-5 body-2">
+            <v-list-item :to="localePath('/result')" link class="text-none font-weight-regular pl-5 body-2">
               {{ $t('toolbar.result') }}
             </v-list-item>
-            <v-list-item to="localePath('/compare')" link class="text-none font-weight-regular pl-5 body-2">
+            <v-list-item :to="localePath('/compare')" link class="text-none font-weight-regular pl-5 body-2">
               {{ $t('toolbar.compare') }}
             </v-list-item>
-            <v-list-item to="localePath('/articles')" link class="text-none font-weight-regular pl-5 body-2">
+            <v-list-item :to="localePath('/articles')" link class="text-none font-weight-regular pl-5 body-2">
               {{ $t('toolbar.articles') }}
             </v-list-item>
-            <v-list-item to="localePath('/privacy')" link class="text-none font-weight-regular pl-5 body-2">
+            <v-list-item :to="localePath('/privacy')" link class="text-none font-weight-regular pl-5 body-2">
               {{ $t('toolbar.privacy') }}
             </v-list-item>
-            <v-list-item to="localePath('/about')" link class="text-none font-weight-regular pl-5 body-2">
+            <v-list-item :to="localePath('/about')" link class="text-none font-weight-regular pl-5 body-2">
               {{ $t('toolbar.about') }}
             </v-list-item>
-            <v-list-item to="localePath('/faq')" link class="text-none font-weight-regular pl-5 body-2">
+            <v-list-item :to="localePath('/faq')" link class="text-none font-weight-regular pl-5 body-2">
               FAQ
             </v-list-item>
           </v-list>
