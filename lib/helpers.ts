@@ -1,4 +1,4 @@
-import b5, { B5Item } from '@alheimsins/b5-johnson-120-ipip-neo-pi-r';
+import b5, { type Question, type Info } from '@alheimsins/b5-johnson-120-ipip-neo-pi-r';
 
 interface Language {
   value: string;
@@ -10,9 +10,9 @@ export const languages: Language[] = b5.getInfo()
   .map(({ id, text }: { id: string; text: string }) => ({ value: id, text }))
   .sort((a: Language, b: Language) => a.text.localeCompare(b.text));
 
-export const getItems: () => B5Item[] = b5.getItems;
+export const getItems: () => Question[] = b5.getItems;
 
-export const getInfo: () => any = b5.getInfo;
+export const getInfo: () => Info = b5.getInfo;
 
 export const secToMin: (seconds: number) => string = (seconds: number) => {
   const minuteDivisor: number = seconds % (60 * 60);
