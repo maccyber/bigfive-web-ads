@@ -1,24 +1,10 @@
 <template>
-  <v-menu
-    v-model="drawer"
-    bottom
-    offset-y
-    max-width="250"
-  >
+  <v-menu v-model="drawer" bottom offset-y max-width="250">
     <template #activator="{ on }">
-      <v-btn
-        icon
-        aria-label="Expand menu"
-        v-on="on"
-        @click="drawer = !drawer"
-      >
-        <v-img
-          v-if="icons[selectedLocale]"
-          :src="icons[selectedLocale]"
-          max-width="24"
-        />
+      <v-btn icon aria-label="Expand menu" v-on="on" @click="drawer = !drawer">
+        <v-img v-if="icons[locale]" :src="icons[locale]" max-width="24" />
         <span v-else>
-          {{ selectedLocale }}
+          {{ locale }}
         </span>
       </v-btn>
     </template>
@@ -30,16 +16,8 @@
       </v-list-item>
       <v-divider />
       <v-row>
-        <v-col
-          v-for="locale in availableLocales"
-          :key="locale.code"
-          cols="6"
-        >
-          <v-list-item
-            link
-            :to="switchLocalePath(locale.code)"
-            class="text-none font-weight-regular pl-5 body-2"
-          >
+        <v-col v-for="locale in availableLocales" :key="locale.code" cols="6">
+          <v-list-item link :to="switchLocalePath(locale.code)" class="text-none font-weight-regular pl-5 body-2">
             {{ locale.name }}
           </v-list-item>
         </v-col>
@@ -48,7 +26,7 @@
   </v-menu>
 </template>
 
-<script>
+<script setup>
 import enIcon from 'svg-country-flags/svg/gb.svg'
 import heIcon from 'svg-country-flags/svg/il.svg'
 import jaIcon from 'svg-country-flags/svg/jp.svg'
@@ -70,42 +48,32 @@ import plIcon from 'svg-country-flags/svg/pl.svg'
 import isIcon from 'svg-country-flags/svg/is.svg'
 import thIcon from 'svg-country-flags/svg/th.svg'
 
-export default {
-  name: 'LanguageSwitcher',
-  data: function () {
-    return {
-      drawer: false,
-      icons: {
-        en: enIcon,
-        he: heIcon,
-        ja: jaIcon,
-        no: noIcon,
-        da: dkIcon,
-        sv: seIcon,
-        fi: fiIcon,
-        de: deIcon,
-        es: esIcon,
-        fr: frIcon,
-        ru: ruIcon,
-        'zh-Hans': cnIcon,
-        uk: uaIcon,
-        hi: inIcon,
-        id: idIcon,
-        pt: ptIcon,
-        it: itIcon,
-        pl: plIcon,
-        is: isIcon,
-        th: thIcon
-      }
-    }
-  },
-  computed: {
-    availableLocales () {
-      return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
-    },
-    selectedLocale () {
-      return this.$i18n.locale
-    }
-  }
+const icons = {
+  en: enIcon,
+  he: heIcon,
+  ja: jaIcon,
+  no: noIcon,
+  da: dkIcon,
+  sv: seIcon,
+  fi: fiIcon,
+  de: deIcon,
+  es: esIcon,
+  fr: frIcon,
+  ru: ruIcon,
+  'zh-Hans': cnIcon,
+  uk: uaIcon,
+  hi: inIcon,
+  id: idIcon,
+  pt: ptIcon,
+  it: itIcon,
+  pl: plIcon,
+  is: isIcon,
+  th: thIcon
 }
+const { locale, locales } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
+
+const availableLocales = computed(() => {
+  return locales.value.filter(i => i.code !== locale.value)
+})
 </script>

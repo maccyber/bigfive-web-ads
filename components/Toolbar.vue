@@ -52,7 +52,7 @@
               v-on="on"
               @click="drawer = !drawer"
             >
-              <v-icon>{{ icons.mdiMenu }}</v-icon>
+              <v-icon>mdi-menu</v-icon>
             </v-btn>
           </template>
           <v-list nav>
@@ -62,14 +62,23 @@
               </v-subheader>
             </v-list-item>
             <v-divider />
-            <v-list-item
-              v-for="item in items"
-              :key="item.title"
-              :to="localePath(item.url)"
-              link
-              class="text-none font-weight-regular pl-5 body-2"
-            >
-              {{ item.title }}
+            <v-list-item to="localePath('/result')" link class="text-none font-weight-regular pl-5 body-2">
+              {{ $t('toolbar.result') }}
+            </v-list-item>
+            <v-list-item to="localePath('/compare')" link class="text-none font-weight-regular pl-5 body-2">
+              {{ $t('toolbar.compare') }}
+            </v-list-item>
+            <v-list-item to="localePath('/articles')" link class="text-none font-weight-regular pl-5 body-2">
+              {{ $t('toolbar.articles') }}
+            </v-list-item>
+            <v-list-item to="localePath('/privacy')" link class="text-none font-weight-regular pl-5 body-2">
+              {{ $t('toolbar.privacy') }}
+            </v-list-item>
+            <v-list-item to="localePath('/about')" link class="text-none font-weight-regular pl-5 body-2">
+              {{ $t('toolbar.about') }}
+            </v-list-item>
+            <v-list-item to="localePath('/faq')" link class="text-none font-weight-regular pl-5 body-2">
+              FAQ
             </v-list-item>
           </v-list>
         </v-menu>
@@ -78,35 +87,10 @@
   </div>
 </template>
 
-<script>
-import { mdiMenu } from '@mdi/js'
-
-export default {
-  components: {
-    LanguageSwitcher: () => import('./LanguageSwitcher')
-  },
-  data: function () {
-    const icons = { mdiMenu }
-    return {
-      drawer: false,
-      icons
-    }
-  },
-  computed: {
-    items () {
-      return [
-        { title: this.$t('toolbar.result'), url: '/result' },
-        { title: this.$t('toolbar.compare'), url: '/compare' },
-        { title: this.$t('toolbar.articles'), url: '/articles' },
-        { title: this.$t('toolbar.privacy'), url: '/privacy' },
-        { title: this.$t('toolbar.about'), url: '/about' },
-        { title: 'FAQ', url: '/faq' }
-      ]
-    }
-  }
-}
-
+<script setup>
+const drawer = ref(false)
 </script>
+
 
 <style>
 .app-bar-shadow {

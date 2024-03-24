@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <!-- <Toolbar /> -->
+    <Toolbar />
 
     <v-main>
       <slot />
