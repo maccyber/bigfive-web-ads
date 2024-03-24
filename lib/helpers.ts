@@ -14,22 +14,14 @@ export const getItems: () => Question[] = b5.getItems;
 
 export const getInfo: () => Info = b5.getInfo;
 
-export const secToMin: (seconds: number) => string = (seconds: number) => {
-  const minuteDivisor: number = seconds % (60 * 60);
-  const minutes: number = Math.floor(minuteDivisor / 60);
-  const secondDivisor: number = minuteDivisor % 60;
-  let remSecs: number = Math.ceil(secondDivisor);
-
-  switch (true) {
-    case seconds < 10:
-      return `0:0${seconds}`;
-    case seconds < 60:
-      return `0:${seconds}`;
-    default:
-      if (remSecs < 10 && remSecs > 0) remSecs = `0${remSecs}`;
-      if (remSecs === 0) remSecs = 0;
-      return `${minutes}:${remSecs}`;
-  }
+export const secToMin = (seconds: number): string => {
+  const minutes: number = Math.floor(seconds / 60);
+  const remainingSeconds: number = seconds % 60;
+  
+  const formattedMinutes: string = minutes < 10 ? `0${minutes}` : `${minutes}`;
+  const formattedSeconds: string = remainingSeconds < 10 ? `0${remainingSeconds}` : `${remainingSeconds}`;
+  
+  return `${formattedMinutes}:${formattedSeconds}`;
 };
 
 export const sleep: (ms: number) => Promise<void> = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
