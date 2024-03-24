@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   },
   ssr: true,
   modules: [
+    '@nuxt/image',
     '@nuxtjs/google-fonts',
     '@vite-pwa/nuxt',
     '@nuxtjs/i18n',

@@ -22,6 +22,7 @@
   "dependencies": {
     "@alheimsins/b5-johnson-120-ipip-neo-pi-r": "6.0.11",
     "@mdi/font": "7.4.47",
+    "@nuxt/image": "1.4.0",
     "@pinia/nuxt": "0.5.1",
     "apexcharts": "3.48.0",
     "nuxt": "3.11.1",
