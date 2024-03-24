@@ -8,7 +8,7 @@ declare module '#app' {
 }
 
 export default defineNuxtRouteMiddleware((to) => {
-  if (process.env.NODE_ENV !== 'production') {
+  if (process.env.NODE_ENV !== 'production' && to.meta.id === undefined) {
     console.warn(`Page "${to.path}" is missing the "id" meta tag for SoMe tag localization`)
   }
 
