@@ -1,55 +1,23 @@
 <template>
   <div>
-    <v-app-bar
-      app
-      color="white"
-      class="app-bar-shadow"
-    >
-      <div class="toolbar-wrapper">
+    <v-app-bar app color="white" class="app-bar-shadow">
+      <div class="toolbar-wrapper px-3">
         <div class="d-flex align-center">
           <nuxt-link :to="localePath('/')">
-            <transition
-              appear
-              name="rotate"
-            >
-              <v-img
-                alt="BigFive logo"
-                class="shrink mr-2"
-                contain
-                src="/logo.svg"
-                transition="fade-transition"
-                width="40"
-              />
-            </transition>
+            <v-img alt="BigFive logo" class="shrink mr-2" contain src="/logo.svg" width="40" />
           </nuxt-link>
         </div>
         <v-spacer />
-        <v-btn
-          text
-          :to="localePath('result')"
-          class="hidden-sm-and-down text-none font-weight-regular"
-        >
+        <v-btn text :to="localePath('result')" class="hidden-sm-and-down text-none font-weight-regular">
           {{ $t('toolbar.see_results') }}
         </v-btn>
-        <v-btn
-          text
-          :to="localePath('compare')"
-          class="hidden-sm-and-down text-none font-weight-regular"
-        >
+        <v-btn text :to="localePath('compare')" class="hidden-sm-and-down text-none font-weight-regular">
           {{ $t('toolbar.compare_with') }}
         </v-btn>
         <LanguageSwitcher />
-        <v-menu
-          bottom
-          offset-y
-          min-width="150"
-        >
+        <v-menu bottom offset-y min-width="150">
           <template v-slot:activator="{ props }">
-            <v-btn
-              icon
-              aria-label="Expand menu"
-              v-bind="props"
-            >
+            <v-btn icon aria-label="Expand menu" v-bind="props">
               <v-icon>mdi-menu</v-icon>
             </v-btn>
           </template>
@@ -92,7 +60,7 @@ const drawer = ref(false)
 
 <style>
 .app-bar-shadow {
-  box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.1) !important;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1) !important;
 }
 
 .toolbar-wrapper {
@@ -104,15 +72,7 @@ const drawer = ref(false)
   align-items: center;
 }
 
-@keyframes spinHorizontal {
-  0% { transform: rotateY(0deg); }
-  100% { transform: rotateY(360deg); }
-}
-.rotate-enter-active {
-  animation: spinHorizontal 1s;
-}
-
 .v-menu__content {
-  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.02) !important;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.02) !important;
 }
 </style>
