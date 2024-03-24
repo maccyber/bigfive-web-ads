@@ -19,7 +19,6 @@
 </template>
 
 <script>
-import { mdiGithub } from '@mdi/js'
 export default {
   name: 'About',
   head () {

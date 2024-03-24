@@ -1,29 +1,29 @@
 <template>
   <div class="pt-5">
     <v-tooltip bottom>
-      <template #activator="{ on }">
-        <a v-on="on" @click="copyLink(`https://bigfive-test.com/${id}`)">
-          <v-icon x-large>{{ mdiLink }}</v-icon>
+      <template v-slot:activator="{ props }">
+        <a v-bind="props" @click="copyLink(`https://bigfive-test.com/${id}`)">
+          <v-icon x-large color="black">mdi-link</v-icon>
         </a>
       </template>
       {{ $t('shareLinks.copyLink') }}
     </v-tooltip>
 
     <v-tooltip bottom>
-      <template #activator="{ on }">
+      <template v-slot:activator="{ props }">
         <a :href="'https://www.facebook.com/sharer/sharer.php?u=https://bigfive-test.com/' + id" target="_blank"
-          rel="noopener" aria-label="Share on facebook" v-on="on">
-          <v-icon x-large>{{ mdiFacebook }}</v-icon>
+          rel="noopener" aria-label="Share on facebook" v-bind="props">
+          <v-icon x-large color="black">mdi-facebook</v-icon>
         </a>
       </template>
       {{ $t('shareLinks.shareFacebook') }}
     </v-tooltip>
 
     <v-tooltip bottom>
-      <template #activator="{ on }">
+      <template v-slot:activator="{ props }">
         <a :href="'https://twitter.com/intent/tweet?text=See my personality traits!&url=https://bigfive-test.com/' + id"
-          target="_blank" rel="noopener" aria-label="Share on twitter" v-on="on">
-          <v-icon x-large>{{ mdiTwitter }}</v-icon>
+          target="_blank" rel="noopener" aria-label="Share on twitter" v-bind="props">
+          <v-icon x-large color="black">mdi-twitter</v-icon>
         </a>
       </template>
       {{ $t('shareLinks.shareTwitter') }}
@@ -40,7 +40,6 @@
 </template>
 
 <script setup>
-import { mdiFacebook, mdiTwitter, mdiLink } from '@mdi/js'
 import { sleep } from '../lib/helpers'
 const dialog = ref(false)
 
@@ -62,6 +61,7 @@ const props = defineProps({
     default: ''
   }
 })
+const id = props.id
 </script>
 
 <style scoped>

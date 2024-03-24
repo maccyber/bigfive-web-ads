@@ -13,7 +13,7 @@
     <v-card-text>
       <span v-html="$t('agreeablenessPage.text1')" />
       <blockquote class="blockquote">
-        <v-icon>mdi-format-quote-open }}</v-icon>
+        <v-icon>mdi-format-quote-open</v-icon>
         <span v-html="$t('agreeablenessPage.quote')" />
         <v-icon>mdi-format-quote-close</v-icon>
       </blockquote>
