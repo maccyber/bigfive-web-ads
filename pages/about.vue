@@ -22,6 +22,6 @@
 import { mdiGithub } from '@mdi/js'
 
 definePageMeta({
-  i18nKey: 'about'
+  id: 'about'
 })
 </script>

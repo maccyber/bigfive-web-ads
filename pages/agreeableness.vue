@@ -26,7 +26,7 @@
 import { mdiFormatQuoteOpen, mdiFormatQuoteClose } from '@mdi/js'
 
 definePageMeta({
-  i18nKey: 'agreeableness'
+  id: 'agreeableness'
 })
 </script>
 

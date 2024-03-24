@@ -3,15 +3,15 @@ import { useSeoHeaders } from "~/lib/seo-headers"
 // https://nuxt.com/docs/guide/directory-structure/pages/#typing-custom-metadata
 declare module '#app' {
   interface PageMeta {
-    i18nKey?: string
+    id?: string
   }
 }
 
 export default defineNuxtRouteMiddleware((to) => {
   if (process.env.NODE_ENV !== 'production') {
-    console.warn(`Page "${to.path}" is missing i18nKey meta tag`)
+    console.warn(`Page "${to.path}" is missing the "id" meta tag for SoMe tag localization`)
   }
 
-  const i18nKey = to.meta.i18nKey || 'frontpage'
-  useSeoHeaders(i18nKey)
+  const pageId = to.meta.id || 'frontpage'
+  useSeoHeaders(pageId)
 })

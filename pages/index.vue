@@ -82,7 +82,7 @@ const display = ref(useDisplay())
 const store = useMainStore()
 
 definePageMeta({
-  i18nkey: 'frontpage'
+  id: 'frontpage'
 })
 </script>
 
