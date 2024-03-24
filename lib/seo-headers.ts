@@ -14,6 +14,7 @@ export function useSeoHeaders (key: string) {
     ogType: 'website',
     ogUrl: requestUrl.origin,
     ogImage: iconUrl.href,
+    ogImageAlt: 'BigFive logo',
     ogTitle: t(`${key}.seo.title`),
     ogDescription: t(`${key}.seo.description`),
     twitterTitle: t(`${key}.seo.title`),
